@@ -48,7 +48,6 @@ var parseJSON = function(json) {
         lastBreak = i + 1;
       }
       if (json[i] === '}' && exitCharsToPass === 0) {
-        console.log(lastBreak, i-1);
         returnObj[currentKey] = parseJSON(json.substring(lastBreak, i));
         //set key and value
       }
